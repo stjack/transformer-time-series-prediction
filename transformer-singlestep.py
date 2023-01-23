@@ -10,7 +10,7 @@ np.random.seed(0)
 
 # S is the source sequence length
 # T is the target sequence length
-# N is the batch size
+# N is the batch size 
 # E is the feature number
 
 #src = torch.rand((10, 32, 512)) # (S,N,E) 
@@ -19,7 +19,7 @@ np.random.seed(0)
 
 input_window = 100 # number of input steps
 output_window = 1 # number of prediction steps, in this model its fixed to one
-batch_size = 10 
+batch_size = 10 # 每次使用10个样本训练
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 class PositionalEncoding(nn.Module):
